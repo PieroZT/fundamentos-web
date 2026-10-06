@@ -8,14 +8,48 @@
 <body>
 <!-- CSS: Hojas de estilo en cascada -->
 <!-- selector: {} -->
- <!--  -->
+<!-- ¿Que es un selector? = a quien le afecta los atributos estios -->
+<!-- etiqueta {}, .unaclase {}, #identificador {} -->
 <style>
+  *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  #titulo{
+    color: blue;
+    text-align: center;
+    text-transform: uppercase; /* Mayuscula */
+    font-weight: bold; /* Negrita */
+  }
+
+  /* Le afecta a todas la etiquetas <p> */
   p{
     color: red; 
     text-align: center; 
     font-style: italic;
+    margin-top: 2em; /* 1em = 16px = 1M */
+    margin-bottom: 4em;
+  }
+
+  /* Clase que puede heredarse muchas veces */
+  .importante{
+    background-color: bisque;
+    border: 1px dashed black;
+    padding: 1em; /* Espacio interno */
+  }
+
+  .caja{
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: inline-block;
   }
 </style>
+
+<h1 id="titulo">Fundamentos CSS</h1>
 <!-- atributo: valor: atributo: valor -->
   <p>
      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique asperiores amet ullam neque porro vero odit quos doloremque non sed, sequi ipsum impedit quia. Aperiam officiis minima recusandae sit hic!
@@ -28,5 +62,22 @@
      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fugiat repellendus aut dicta saepe voluptatibus error in quia ut repellat, non quisquam quasi id fugit nemo minus illo. Ratione, excepturi.
      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt debitis exercitationem necessitatibus ullam perferendis fugiat reiciendis modi repellendus, dicta iusto aspernatur! In at, sunt voluptatem possimus dolorum neque corporis debitis?
   </p>
+
+  <p class="importante">
+     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique asperiores amet ullam neque porro vero odit quos doloremque non sed, sequi ipsum impedit quia. Aperiam officiis minima recusandae sit hic!
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fugiat repellendus aut dicta saepe voluptatibus error in quia ut repellat, non quisquam quasi id fugit nemo minus illo. Ratione, excepturi.
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt debitis exercitationem necessitatibus ullam perferendis fugiat reiciendis modi repellendus, dicta iusto aspernatur! In at, sunt voluptatem possimus dolorum neque corporis debitis?
+  </p>
+
+  <hr> <!-- Linea horizontal -->
+  <br> <!-- Salto de linea -->
+
+  <div class="caja">
+    Caja 1
+  </div>
+
+  <div class="caja">
+    Caja 2
+  </div>
 </body>
 </html>
