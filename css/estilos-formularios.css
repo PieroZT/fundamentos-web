@@ -1,0 +1,417 @@
+/* =========================================================
+   FORMULARIOS - ESTILO PLANO Y ELEGANTE
+   ========================================================= */
+
+/* Variables */
+:root {
+    --form-primary: #3498db;
+    --form-primary-dark: #2980b9;
+    --form-focus-bg: #f0f8ff;
+    --form-border: #d8dee4;
+    --form-border-hover: #aeb8c2;
+    --form-text: #2c3e50;
+    --form-label: #34495e;
+    --form-placeholder: #95a5a6;
+    --form-background: #ffffff;
+    --form-muted: #f5f7f9;
+    --form-danger: #e74c3c;
+    --form-success: #27ae60;
+    --form-radius: 5px;
+    --form-transition: 0.2s ease;
+}
+
+
+/* =========================================================
+   CONTENEDOR DEL FORMULARIO
+   ========================================================= */
+
+.form-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background: var(--form-background);
+    border: 1px solid var(--form-border);
+    border-radius: var(--form-radius);
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   GRUPOS DE CONTROLES
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ETIQUETAS
+   ========================================================= */
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--form-label);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Campo obligatorio */
+
+.form-group.required label::after {
+    content: " *";
+    color: var(--form-danger);
+}
+
+
+/* =========================================================
+   INPUTS Y SELECT
+   ========================================================= */
+
+.form-control {
+    display: block;
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+
+    box-sizing: border-box;
+
+    color: var(--form-text);
+    background-color: #fff;
+
+    border: 1px solid var(--form-border);
+    border-radius: var(--form-radius);
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color var(--form-transition),
+        background-color var(--form-transition),
+        box-shadow var(--form-transition);
+}
+
+
+/* Placeholder */
+
+.form-control::placeholder {
+    color: var(--form-placeholder);
+    opacity: 1;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.form-control:hover {
+    border-color: var(--form-border-hover);
+}
+
+
+/* =========================================================
+   CONTROL ACTIVO
+   ========================================================= */
+
+/*
+   :focus permite identificar claramente el control
+   que está activo mediante teclado o mouse.
+
+   Es especialmente útil cuando el usuario navega
+   utilizando TAB / ENTER.
+*/
+
+.form-control:focus {
+    border-color: var(--form-primary);
+    background-color: var(--form-focus-bg);
+
+    box-shadow:
+        0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+
+/*
+   :focus-visible da prioridad al indicador visual
+   cuando el usuario está navegando mediante teclado.
+*/
+
+.form-control:focus-visible {
+    border-color: var(--form-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(52, 152, 219, 0.20);
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+select.form-control {
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding-right: 38px;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, #7f8c8d 50%),
+        linear-gradient(135deg, #7f8c8d 50%, transparent 50%);
+
+    background-position:
+        calc(100% - 16px) 18px,
+        calc(100% - 11px) 18px;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.form-button {
+    display: inline-block;
+
+    min-height: 42px;
+    padding: 10px 20px;
+
+    border: 1px solid transparent;
+    border-radius: var(--form-radius);
+
+    background-color: var(--form-primary);
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--form-transition),
+        border-color var(--form-transition),
+        box-shadow var(--form-transition),
+        transform var(--form-transition);
+}
+
+
+/* Hover del botón */
+
+.form-button:hover {
+    background-color: var(--form-primary-dark);
+}
+
+
+/* Botón activo */
+
+.form-button:active {
+    transform: translateY(1px);
+}
+
+
+/* Botón enfocado mediante teclado */
+
+.form-button:focus-visible {
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(52, 152, 219, 0.25);
+}
+
+
+/* =========================================================
+   BOTÓN SECUNDARIO
+   ========================================================= */
+
+.form-button.secondary {
+    background-color: #fff;
+    color: var(--form-text);
+    border-color: var(--form-border);
+}
+
+.form-button.secondary:hover {
+    background-color: var(--form-muted);
+    border-color: var(--form-border-hover);
+}
+
+
+/* =========================================================
+   BOTÓN DE PELIGRO
+   ========================================================= */
+
+.form-button.danger {
+    background-color: var(--form-danger);
+}
+
+.form-button.danger:hover {
+    background-color: #c0392b;
+}
+
+
+/* =========================================================
+   BOTONES DEL FORMULARIO
+   ========================================================= */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--form-border);
+}
+
+
+/* =========================================================
+   MENSAJES / AYUDA
+   ========================================================= */
+
+.form-help {
+    display: block;
+    margin-top: 5px;
+
+    color: #7f8c8d;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ESTADOS DE VALIDACIÓN
+   ========================================================= */
+
+.form-control.is-valid {
+    border-color: var(--form-success);
+}
+
+.form-control.is-valid:focus {
+    box-shadow:
+        0 0 0 3px rgba(39, 174, 96, 0.15);
+}
+
+
+.form-control.is-invalid {
+    border-color: var(--form-danger);
+}
+
+.form-control.is-invalid:focus {
+    box-shadow:
+        0 0 0 3px rgba(231, 76, 60, 0.15);
+}
+
+
+/* =========================================================
+   CAMPOS DESHABILITADOS
+   ========================================================= */
+
+.form-control:disabled {
+    color: #95a5a6;
+    background-color: #f1f3f5;
+    border-color: #e1e5e8;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   DISEÑO EN DOS COLUMNAS
+   ========================================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+/* Campo que ocupa todo el ancho */
+
+.form-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .form-container {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid .full-width {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULARES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .form-container {
+        margin: 10px 0;
+        padding: 15px;
+
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        min-height: 44px;
+        font-size: 16px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD / REDUCCIÓN DE MOVIMIENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .form-control,
+    .form-button {
+        transition: none;
+    }
+}
